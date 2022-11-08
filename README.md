@@ -1,7 +1,14 @@
-# Form Contrlo Project
+# Form Control Project
 
-**See Site**
+The form control is an excellent exercise to deeply understand how React form works.
+
+**See Site:**
+
 ![alt text](image/form-control.jpeg "form-control site")
+
+**Visit the Form-Control page:**
+
+https://oniso20.github.io/form-control/
 
 # Getting Started with Create React App
 
