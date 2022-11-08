@@ -1,0 +1,24 @@
+.outputContainer {
+    display: flex;
+    font-family: 'Playball';
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: gainsboro;
+    width: 20rem;
+    height: 40vh;
+    padding: 30px 20px 20px 70px;
+    margin: 20px 0;
+    border-radius: 77% 23% 76% 24% / 32% 69% 31% 68%;
+    box-shadow: 0px 0px 6px 9px rgba(100, 31, 31, 0.715);
+}
+
+.output {
+    padding-left: 1rem;
+    border-bottom: 2px dotted red;
+    border-left: 2px double red;
+    align-self: flex-start;
+}
