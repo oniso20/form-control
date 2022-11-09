@@ -32,13 +32,14 @@ class App extends Component {
   };
 
   refreshHandler = () => {
-    // window.location.reload(false);
     this.setState({
-      firstName: "",
-      lastName: "",
-      phoneNumber: "",
-      message: "",
-      role: "",
+      note: {
+        firstName: "",
+        lastName: "",
+        phoneNumber: "",
+        message: "",
+        role: "",
+      },
       submitState: false,
     });
   };
