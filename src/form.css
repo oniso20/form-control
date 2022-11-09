@@ -2,6 +2,7 @@ form {
     display: flex;
     font-family: 'DM Serif', sans-serif;
     width: 37rem;
+    max-width: 100vw;
     height: 40vh;
     align-items: flex-start;
     justify-content: center;
@@ -14,22 +15,34 @@ form {
 }
 
 table {
+    font-family: inherit;
     margin-left: 5rem;
+    max-width: 100vw;
 }
 
 input {
+    font-family: inherit;
     display: flex;
     margin-bottom: 10px;
     width: 11rem;
     height: 1.2rem;
     padding: 5px;
     border-radius: 5px;
+    outline-offset: 3px;
+    max-width: 100vw;
 }
 
 select {
     margin-bottom: 10px;
     width: 11rem;
     height: 1.5rem;
+    max-width: 100vw;
+}
+
+#message {
+    height: 2rem;
+    margin-bottom: 0;
+    max-width: 100vw;
 }
 
 label {

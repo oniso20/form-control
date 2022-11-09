@@ -9,53 +9,63 @@ import React, { Component } from "react";
 
 class App extends Component {
   state = {
-    firstName: "",
-    lastName: "",
-    phoneNumber: "",
-    message: "",
-    role: "",
     submitState: false,
+    note: {
+      firstName: "",
+      lastName: "",
+      phoneNumber: "",
+      message: "",
+      role: "",
+    },
   };
 
   inputHandler = (event) => {
     this.setState({
-      [event.target.name]: event.target.value,
+      note: { ...this.state.note, [event.target.name]: event.target.value },
+      // [event.target.name]: event.target.value,
     });
   };
 
   submitHandler = (event) => {
     event.preventDefault();
-    this.setState({ submitState: true });
+    this.setState({ submitState: !this.state.submitState });
   };
 
   refreshHandler = () => {
-    window.location.reload(false);
+    // window.location.reload(false);
+    this.setState({
+      firstName: "",
+      lastName: "",
+      phoneNumber: "",
+      message: "",
+      role: "",
+      submitState: false,
+    });
   };
 
   render() {
-    const submitState = this.state.submitState;
-    if (submitState === true) {
-      return (
-        <Popup
-          firstName={this.state.firstName}
-          lastName={this.state.lastName}
-          phoneNumber={this.state.phoneNumber}
-          message={this.state.message}
-          role={this.state.role}
-          click={this.refreshHandler}
-        />
-      );
-    }
     return (
       <div className="global">
-        <Form change={this.inputHandler} click={this.submitHandler} />
-        <View
-          firstName={this.state.firstName}
-          lastName={this.state.lastName}
-          phoneNumber={this.state.phoneNumber}
-          message={this.state.message}
-          role={this.state.role}
-        />
+        {!this.state.submitState && (
+          <Form
+            change={this.inputHandler}
+            submit={this.submitHandler}
+            {...this.state.note}
+          />
+        )}
+        {!this.state.submitState && <View {...this.state.note} />}
+        {this.state.submitState && (
+          <Popup
+            // {...this.state.note}
+            firstName={this.state.note.firstName}
+            lastName={this.state.note.lastName}
+            phoneNumber={this.state.note.phoneNumber}
+            message={this.state.note.message}
+            role={this.state.note.role}
+            refresh={this.refreshHandler}
+            close={this.submitHandler}
+          />
+        )}
       </div>
     );
   }

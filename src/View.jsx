@@ -20,12 +20,12 @@ const View = (props) => {
       </div>
       <div className="output">
         <p>
-          Message: <span id="messageResult">{props.message}</span>
+          Role: <span id="roleResult">{props.role}</span>
         </p>
       </div>
       <div className="output">
         <p>
-          Role: <span id="roleResult">{props.role}</span>
+          Message: <span id="messageResult">{props.message}</span>
         </p>
       </div>
     </div>

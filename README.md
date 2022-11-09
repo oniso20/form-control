@@ -1,6 +1,6 @@
 # Form Control Project
 
-The form control is an excellent exercise to deeply understand how React form works.
+The form control is an excellent exercise to deeply understand React controlled components and how React form works.
 
 **See Site:**
 
